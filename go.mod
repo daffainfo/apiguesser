@@ -1,5 +1,5 @@
-module github.com/daffainfo/ApiGuesser
+module github.com/daffainfo/apiguesser
 
 go 1.16
 
-replace github.com/daffainfo/ApiGuesser => /ApiGuesser
+replace github.com/daffainfo/apiguesser => /apiguesser
