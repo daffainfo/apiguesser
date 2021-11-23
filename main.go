@@ -29,7 +29,7 @@ Author: Muhammad Daffa
 Version: 1.0`)
 }
 
-func Regex_api_file(path string) {
+func regex_api_file(path string) {
 	file, err := os.Open(path)
 	if err != nil {
 		log.Fatal(err)
@@ -39,7 +39,7 @@ func Regex_api_file(path string) {
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		fmt.Println(scanner.Text())
-		Regex_api(scanner.Text())
+		fmt.Println(Regex_api(scanner.Text()))
 	}
 
 	if err := scanner.Err(); err != nil {
@@ -47,8 +47,9 @@ func Regex_api_file(path string) {
 	}
 }
 
-func Regex_api(contents string) {
+func Regex_api(contents string) string {
 	var data []regex_data
+	var result string
 
 	resp, err := http.Get("https://raw.githubusercontent.com/daffainfo/ApiGuesser/main/db.json")
 	if err != nil {
@@ -61,16 +62,15 @@ func Regex_api(contents string) {
 	var errjson = json.Unmarshal([]byte(byteValue), &data)
 	if errjson != nil {
 		fmt.Println(err.Error())
-		return
 	}
 
 	for i := range data {
 		re := regexp.MustCompile(data[i].Regex)
 		if re.MatchString(contents) {
-			res1 := re.FindAllString(contents, 1)
-			fmt.Println(data[i].Name, res1)
+			result = data[i].Name
 		}
 	}
+	return result
 }
 
 func main() {
@@ -81,9 +81,9 @@ func main() {
 
 	if *api != "" && *path == "" && len(*api) > 3 {
 		fmt.Println("Possible API Key:")
-		Regex_api(*api)
+		fmt.Println(Regex_api(*api))
 	} else if *api == "" && *path != "" {
-		Regex_api_file(*path)
+		regex_api_file(*path)
 	} else if *api != "" || *path != "" {
 		fmt.Println("Can't call 2 arguments at once")
 	}
