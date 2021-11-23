@@ -68,7 +68,7 @@ func Regex_api(contents string) {
 		re := regexp.MustCompile(data[i].Regex)
 		if re.MatchString(contents) {
 			res1 := re.FindAllString(contents, 1)
-			fmt.Println("[+] "+data[i].Name, " ", res1)
+			fmt.Println(data[i].Name, res1)
 		}
 	}
 }
