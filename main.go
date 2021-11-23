@@ -1,21 +1,11 @@
 package main
 
 import (
-	"bufio"
-	"encoding/json"
 	"flag"
 	"fmt"
-	"io/ioutil"
-	"log"
-	"net/http"
-	"os"
-	"regexp"
-)
 
-type regex_data struct {
-	Name  string `json:"Name"`
-	Regex string `json:"Regex"`
-}
+	g "github.com/daffainfo/apiguesser/guesser"
+)
 
 func show_banner() {
 	fmt.Println(`                                          
@@ -29,50 +19,6 @@ Author: Muhammad Daffa
 Version: 1.0`)
 }
 
-func regex_api_file(path string) {
-	file, err := os.Open(path)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer file.Close()
-
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		fmt.Println(scanner.Text())
-		fmt.Println(Regex_api(scanner.Text()))
-	}
-
-	if err := scanner.Err(); err != nil {
-		log.Fatal(err)
-	}
-}
-
-func Regex_api(contents string) string {
-	var data []regex_data
-	var result string
-
-	resp, err := http.Get("https://raw.githubusercontent.com/daffainfo/ApiGuesser/main/db.json")
-	if err != nil {
-		fmt.Println("No response from request")
-	}
-	defer resp.Body.Close()
-
-	byteValue, _ := ioutil.ReadAll(resp.Body)
-
-	var errjson = json.Unmarshal([]byte(byteValue), &data)
-	if errjson != nil {
-		fmt.Println(err.Error())
-	}
-
-	for i := range data {
-		re := regexp.MustCompile(data[i].Regex)
-		if re.MatchString(contents) {
-			result = data[i].Name
-		}
-	}
-	return result
-}
-
 func main() {
 	show_banner()
 	api := flag.String("api", "", "An API Key. Example: tue3sv9hzsey1me4l7fwq3t46u5k8wag")
@@ -81,9 +27,9 @@ func main() {
 
 	if *api != "" && *path == "" && len(*api) > 3 {
 		fmt.Println("Possible API Key:")
-		fmt.Println(Regex_api(*api))
+		fmt.Println(g.Regex_api(*api))
 	} else if *api == "" && *path != "" {
-		regex_api_file(*path)
+		g.Regex_api_file(*path)
 	} else if *api != "" || *path != "" {
 		fmt.Println("Can't call 2 arguments at once")
 	}
