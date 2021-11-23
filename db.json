@@ -8,12 +8,8 @@
         "Regex": "^\\s*([a-z0-9]{64})\\z"
     },
     {
-        "Name": "TheCatAPI API Key",
-        "Regex": "[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[0-9a-f]{12}"
-    },
-    {
-        "Name": "TheDogAPI API Key",
-        "Regex": "[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[0-9a-f]{12}"
+        "Name": "TheCatAPI API Key\nTheDogAPI API Key\nURLScan API Key",
+        "Regex": "[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}"
     },
     {
         "Name": "AniAPI OAuth Token",
@@ -30,10 +26,6 @@
     {
         "Name": "Google Safe Browsing API Key",
         "Regex": "AIza[0-9A-Za-z-_]{35}"
-    },
-    {
-        "Name": "URLScan API Key",
-        "Regex": "[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}"
     },
     {
         "Name": "Cooper Hewitt API Key",
