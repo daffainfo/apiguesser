@@ -4,7 +4,7 @@
         "Regex": "^\\s*([a-z0-9]{33})\\z"
     },
     {
-        "Name": "IUCN API Key",
+        "Name": "IUCN API Key\nAlienVault Open Threat Exchange API Key\nVirusTotal API Key\nDribbble API Key",
         "Regex": "^\\s*([a-z0-9]{64})\\z"
     },
     {
@@ -28,10 +28,6 @@
         "Regex": "^\\s*([a-z0-9]{80})\\z"
     },
     {
-        "Name": "AlienVault Open Threat Exchange API Key",
-        "Regex": "^\\s*([a-z0-9]{64})\\z"
-    },
-    {
         "Name": "Google Safe Browsing API Key",
         "Regex": "AIza[0-9A-Za-z-_]{35}"
     },
@@ -40,16 +36,8 @@
         "Regex": "[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}"
     },
     {
-        "Name": "VirusTotal API Key",
-        "Regex": "^\\s*([a-z0-9]{64})\\z"
-    },
-    {
         "Name": "Cooper Hewitt API Key",
         "Regex": "^\\s*([a-z0-9]{32})\\z"
-    },
-    {
-        "Name": "Dribbble API Key",
-        "Regex": "^\\s*([a-z0-9]{64})\\z"
     },
     {
         "Name": "Europeana API Key",
