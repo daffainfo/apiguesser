@@ -1,4 +1,4 @@
-module github.com/daffainfo/ApiGuesser
+module ApiGuesser
 
 go 1.16
 
