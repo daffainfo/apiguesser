@@ -12,8 +12,8 @@ import (
 )
 
 type regex_data struct {
-	Name  string `json:"Name"`
-	Regex string `json:"Regex"`
+	Name  []string `json:"Name"`
+	Regex string   `json:"Regex"`
 }
 
 func Regex_api_file(path string) {
@@ -54,7 +54,7 @@ func Regex_api(contents string) string {
 	for i := range data {
 		re := regexp.MustCompile(data[i].Regex)
 		if re.MatchString(contents) {
-			result = data[i].Name
+			result = data[i].Name[i]
 		}
 	}
 	return result

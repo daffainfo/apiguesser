@@ -1,70 +1,54 @@
 [
     {
-        "Name": "AdotpAPet API Key",
-        "Regex": "^\\s*([a-z0-9]{33})\\z"
-    },
-    {
-        "Name": "IUCN API Key\nAlienVault Open Threat Exchange API Key\nVirusTotal API Key\nDribbble API Key",
-        "Regex": "^\\s*([a-z0-9]{64})\\z"
-    },
-    {
-        "Name": "TheCatAPI API Key\nTheDogAPI API Key\nURLScan API Key",
-        "Regex": "[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}"
-    },
-    {
-        "Name": "AniAPI OAuth Token",
-        "Regex": "^[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+/=]*$"
-    },
-    {
-        "Name": "MyAnimeList OAuth Token",
-        "Regex": "^[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+/=]*$"
-    },
-    {
-        "Name": "AbuseIPDB API Key",
-        "Regex": "^\\s*([a-z0-9]{80})\\z"
-    },
-    {
-        "Name": "Google Safe Browsing API Key",
-        "Regex": "AIza[0-9A-Za-z-_]{35}"
-    },
-    {
-        "Name": "Cooper Hewitt API Key",
-        "Regex": "^\\s*([a-z0-9]{32})\\z"
+        "Name": "Rijksmuseum API Key",
+        "Regex": "^\\s*([a-zA-Z0-9]{8})\\z"
     },
     {
         "Name": "Europeana API Key",
         "Regex": "^\\s*([a-z]{8,10})\\z"
     },
     {
-        "Name": "IconFinder API Key",
-        "Regex": "^\\s*([a-zA-Z0-9]{64})\\z"
-    },
-    {
-        "Name": "Rijksmuseum API Key",
-        "Regex": "^\\s*([a-zA-Z0-9]{8})\\z"
-    },
-    {
-        "Name": "Micro User Service API Key",
-        "Regex": "^\\s*([a-z0-9]{48})\\z"
-    },
-    {
         "Name": "Covalent API Key",
         "Regex": "ckey_[a-z0-9]{27}"
+    },
+    {
+        "Name": "Nownodes API Key",
+        "Regex": "^\\s*([a-zA-Z0-9]{32})\\z"
+    },
+    {
+        "Name": ["AdotpAPet API Key"],
+        "Regex": "^\\s*([a-z0-9]{33})\\z"
     },
     {
         "Name": "Etherscan API Key",
         "Regex": "^\\s*([A-Z0-9]{34})\\z"
     },
     {
-        "Name": "Nownodes API Key",
-        "Regex": "^\\s*([A-Za-z0-9]{32})\\z"
+        "Name": ["Google Safe Browsing API Key", "Google Books API Key"],
+        "Regex": "AIza[a-zA-Z0-9-_]{35}"
     },
     {
-        "Name": "API Bible API Key",
-        "Regex": "^\\s*([a-z0-9]{32})\\z"
+        "Name": "Micro User Service API Key",
+        "Regex": "^\\s*([a-z0-9]{48})\\z"
     },
     {
-        "Name": "Google Books API Key",
-        "Regex": "AIza[0-9A-Za-z-_]{35}"
+        "Name": ["IUCN API Key", "AlienVault Open Threat Exchange API Key", "VirusTotal API Key", "Dribbble API Key"],
+        "Regex": "^\\s*([a-z0-9]{64})\\z"
+    },
+    {
+        "Name": ["IconFinder API Key", "API Bible API Key"],
+        "Regex": "^\\s*([a-zA-Z0-9]{64})\\z"
+    },
+    {
+        "Name": "AbuseIPDB API Key",
+        "Regex": "^\\s*([a-z0-9]{80})\\z"
+    },
+    {
+        "Name": ["TheCatAPI API Key", "TheDogAPI API Key","URLScan API Key"],
+        "Regex": "[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}"
+    },
+    {
+        "Name": ["AniAPI OAuth Token", "MyAnimeList OAuth Token"],
+        "Regex": "^[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+/=]*$"
     }
 ]
