@@ -1,18 +1,18 @@
 [
     {
-        "Name": "Rijksmuseum API Key",
+        "Name": ["Rijksmuseum API Key"],
         "Regex": "^\\s*([a-zA-Z0-9]{8})\\z"
     },
     {
-        "Name": "Europeana API Key",
+        "Name": ["Europeana API Key"],
         "Regex": "^\\s*([a-z]{8,10})\\z"
     },
     {
-        "Name": "Covalent API Key",
+        "Name": ["Covalent API Key"],
         "Regex": "ckey_[a-z0-9]{27}"
     },
     {
-        "Name": "Nownodes API Key",
+        "Name": ["Nownodes API Key"],
         "Regex": "^\\s*([a-zA-Z0-9]{32})\\z"
     },
     {
@@ -20,7 +20,7 @@
         "Regex": "^\\s*([a-z0-9]{33})\\z"
     },
     {
-        "Name": "Etherscan API Key",
+        "Name": ["Etherscan API Key"],
         "Regex": "^\\s*([A-Z0-9]{34})\\z"
     },
     {
@@ -28,7 +28,7 @@
         "Regex": "AIza[a-zA-Z0-9-_]{35}"
     },
     {
-        "Name": "Micro User Service API Key",
+        "Name": ["Micro User Service API Key"],
         "Regex": "^\\s*([a-z0-9]{48})\\z"
     },
     {
@@ -40,7 +40,7 @@
         "Regex": "^\\s*([a-zA-Z0-9]{64})\\z"
     },
     {
-        "Name": "AbuseIPDB API Key",
+        "Name": ["AbuseIPDB API Key"],
         "Regex": "^\\s*([a-z0-9]{80})\\z"
     },
     {
