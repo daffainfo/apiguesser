@@ -12,8 +12,8 @@ import (
 )
 
 type regex_data struct {
-	Name  []string `json:"Name"`
-	Regex string   `json:"Regex"`
+	Name  [100]string `json:"Name"`
+	Regex string      `json:"Regex"`
 }
 
 func Regex_api_file(path string) {
@@ -38,7 +38,7 @@ func Regex_api(contents string) string {
 	var data []regex_data
 	var result string
 
-	resp, err := http.Get("https://raw.githubusercontent.com/daffainfo/ApiGuesser/main/db.json")
+	resp, err := http.Get("https://raw.githubusercontent.com/daffainfo/apiguesser/main/db.json")
 	if err != nil {
 		fmt.Println("No response from request")
 	}
