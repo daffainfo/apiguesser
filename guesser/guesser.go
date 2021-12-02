@@ -12,8 +12,8 @@ import (
 )
 
 type regex_data struct {
-	Name  [100]string `json:"Name"`
-	Regex string      `json:"Regex"`
+	Name  string `json:"Name"`
+	Regex string `json:"Regex"`
 }
 
 func Regex_api_file(path string) {
@@ -26,7 +26,7 @@ func Regex_api_file(path string) {
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		fmt.Println(scanner.Text())
-		fmt.Println(Regex_api(scanner.Text()))
+		Regex_api(scanner.Text())
 	}
 
 	if err := scanner.Err(); err != nil {
@@ -34,9 +34,8 @@ func Regex_api_file(path string) {
 	}
 }
 
-func Regex_api(contents string) string {
+func Regex_api(contents string) {
 	var data []regex_data
-	var result string
 
 	resp, err := http.Get("https://raw.githubusercontent.com/daffainfo/apiguesser/main/db.json")
 	if err != nil {
@@ -44,9 +43,9 @@ func Regex_api(contents string) string {
 	}
 	defer resp.Body.Close()
 
-	byteValue, _ := ioutil.ReadAll(resp.Body)
+	body, _ := ioutil.ReadAll(resp.Body)
 
-	var errjson = json.Unmarshal([]byte(byteValue), &data)
+	var errjson = json.Unmarshal(body, &data)
 	if errjson != nil {
 		fmt.Println(err.Error())
 	}
@@ -54,8 +53,7 @@ func Regex_api(contents string) string {
 	for i := range data {
 		re := regexp.MustCompile(data[i].Regex)
 		if re.MatchString(contents) {
-			result = data[i].Name[i]
+			fmt.Println(data[i].Name)
 		}
 	}
-	return result
 }

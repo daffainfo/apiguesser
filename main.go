@@ -7,6 +7,21 @@ import (
 	g "github.com/daffainfo/apiguesser/guesser"
 )
 
+var (
+	Red   = Color("\033[1;31m%s\033[0m")
+	Green = Color("\033[1;32m%s\033[0m")
+	Blue  = Color("\033[1;34m%s\033[0m")
+	Cyan  = Color("\033[1;36m%s\033[0m")
+)
+
+func Color(colorString string) func(...interface{}) string {
+	sprint := func(args ...interface{}) string {
+		return fmt.Sprintf(colorString,
+			fmt.Sprint(args...))
+	}
+	return sprint
+}
+
 func show_banner() {
 	fmt.Println(`                                          
          _                                 
@@ -27,7 +42,7 @@ func main() {
 
 	if *api != "" && *path == "" && len(*api) > 3 {
 		fmt.Println("Possible API Key:")
-		fmt.Println(g.Regex_api(*api))
+		g.Regex_api(*api)
 	} else if *api == "" && *path != "" {
 		g.Regex_api_file(*path)
 	} else if *api != "" || *path != "" {
