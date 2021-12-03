@@ -16,21 +16,40 @@ type regex_data struct {
 	Regex string `json:"Regex"`
 }
 
+var (
+	Red   = Color("\033[1;31m%s\033[0m")
+	Green = Color("\033[1;32m%s\033[0m")
+	Blue  = Color("\033[1;34m%s\033[0m")
+	Cyan  = Color("\033[1;36m%s\033[0m")
+)
+
+func Color(colorString string) func(...interface{}) string {
+	sprint := func(args ...interface{}) string {
+		return fmt.Sprintf(colorString,
+			fmt.Sprint(args...))
+	}
+	return sprint
+}
+
 func Regex_api_file(path string) {
 	file, err := os.Open(path)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal(Red(err))
 	}
 	defer file.Close()
 
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
-		fmt.Println(scanner.Text())
-		fmt.Println(Regex_api(scanner.Text()))
+		fmt.Println(Cyan(scanner.Text()))
+		if Regex_api(scanner.Text()) != "" {
+			fmt.Println(Green(Regex_api(scanner.Text())))
+		} else {
+			fmt.Println(Red("Not match"))
+		}
 	}
 
 	if err := scanner.Err(); err != nil {
-		log.Fatal(err)
+		log.Fatal(Red(err))
 	}
 }
 
@@ -40,7 +59,7 @@ func Regex_api(contents string) string {
 
 	resp, err := http.Get("https://raw.githubusercontent.com/daffainfo/apiguesser/main/db.json")
 	if err != nil {
-		fmt.Println("No response from request")
+		fmt.Println(Red("No response from request"))
 	}
 	defer resp.Body.Close()
 
@@ -48,7 +67,7 @@ func Regex_api(contents string) string {
 
 	var errjson = json.Unmarshal(body, &data)
 	if errjson != nil {
-		fmt.Println(err.Error())
+		fmt.Println(Red(err.Error()))
 	}
 
 	for i := range data {
