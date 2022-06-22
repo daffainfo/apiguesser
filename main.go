@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	// g "github.com/daffainfo/apiguesser/guesser"
 )
 
 var (
@@ -45,7 +44,7 @@ func main() {
 	if *api != "" && *path == "" && len(*api) > 3 {
 		fmt.Println(Cyan(*api))
 		if Regex_api(*api) != "" {
-			fmt.Println(Green(Regex_api(*api)))
+			fmt.Print(Green(Regex_api(*api)))
 		} else {
 			fmt.Println(Red("Not Match"))
 		}

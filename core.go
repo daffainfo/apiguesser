@@ -16,21 +16,6 @@ type regex_data struct {
 	Regex string   `json:"Regex"`
 }
 
-// var (
-// 	Red   = Color("\033[1;31m%s\033[0m")
-// 	Green = Color("\033[1;32m%s\033[0m")
-// 	Blue  = Color("\033[1;34m%s\033[0m")
-// 	Cyan  = Color("\033[1;36m%s\033[0m")
-// )
-
-// func Color(colorString string) func(...interface{}) string {
-// 	sprint := func(args ...interface{}) string {
-// 		return fmt.Sprintf(colorString,
-// 			fmt.Sprint(args...))
-// 	}
-// 	return sprint
-// }
-
 func Regex_api_file(path string) {
 	file, err := os.Open(path)
 	if err != nil {
@@ -71,16 +56,11 @@ func Regex_api(contents string) string {
 	}
 
 	for i := range data {
-		// print(data[i])
-		// length := len(data[i].Name)
 		re := regexp.MustCompile(data[i].Regex)
 		if re.MatchString(contents) {
-			// print(Green(data[i].Name))
 			for _, str := range data[i].Name {
-				result += str + "\n"
-				// print(str + "\n")
+				result += str
 			}
-			// result = data[i].Name[length-1]
 		}
 	}
 	return result

@@ -15,7 +15,7 @@
 
 ## How to Install
 
-```go install github.com/daffainfo/apiguesser```
+```go install github.com/daffainfo/apiguesser@latest```
 
 ## How to Use
 
