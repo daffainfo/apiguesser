@@ -1,5 +1,8 @@
 # apiguesser
 ## Go scripts to guess an API key / OAuth Token
+
+CLI version of https://github.com/daffainfo/apiguesser-web/
+
 ![](https://img.shields.io/github/license/daffainfo/apiguesser)
 ![](https://img.shields.io/github/issues/daffainfo/apiguesser)
 ![](https://img.shields.io/github/forks/daffainfo/apiguesser)
