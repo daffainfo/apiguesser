@@ -59,7 +59,7 @@ func Regex_api(contents string) string {
 		re := regexp.MustCompile(data[i].Regex)
 		if re.MatchString(contents) {
 			for _, str := range data[i].Name {
-				result += str
+				result += str + "\n"
 			}
 		}
 	}
