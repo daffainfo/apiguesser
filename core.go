@@ -71,9 +71,16 @@ func Regex_api(contents string) string {
 	}
 
 	for i := range data {
+		// print(data[i])
+		// length := len(data[i].Name)
 		re := regexp.MustCompile(data[i].Regex)
 		if re.MatchString(contents) {
-			result = data[i].Name[i]
+			// print(Green(data[i].Name))
+			for _, str := range data[i].Name {
+				result += str + "\n"
+				// print(str + "\n")
+			}
+			// result = data[i].Name[length-1]
 		}
 	}
 	return result
