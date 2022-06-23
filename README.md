@@ -14,7 +14,7 @@ CLI version of https://github.com/daffainfo/apiguesser-web/
 
 ## Screenshoot 📷
 
-![image](https://i.ibb.co/GRfQhwN/image.png)
+![image](https://user-images.githubusercontent.com/36522826/175195903-023544b8-f3ac-4cbf-9a43-814af0d95204.png)
 
 ## How to Install
 
