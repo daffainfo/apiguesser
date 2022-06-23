@@ -1,4 +1,4 @@
-package main
+package apiguess
 
 import (
 	"bufio"
@@ -10,6 +10,21 @@ import (
 	"os"
 	"regexp"
 )
+
+var (
+	Red   = Color("\033[1;31m%s\033[0m")
+	Green = Color("\033[1;32m%s\033[0m")
+	Blue  = Color("\033[1;34m%s\033[0m")
+	Cyan  = Color("\033[1;36m%s\033[0m")
+)
+
+func Color(colorString string) func(...interface{}) string {
+	sprint := func(args ...interface{}) string {
+		return fmt.Sprintf(colorString,
+			fmt.Sprint(args...))
+	}
+	return sprint
+}
 
 type regex_data struct {
 	Name  []string `json:"Name"`
@@ -42,7 +57,7 @@ func Regex_api(contents string) string {
 	var data []regex_data
 	var result string
 
-	resp, err := http.Get("https://pastebin.com/raw/9BuLKBUG")
+	resp, err := http.Get("https://raw.githubusercontent.com/daffainfo/apiguesser/main/db.json")
 	if err != nil {
 		fmt.Println(Red("No response from request"))
 	}

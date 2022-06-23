@@ -3,6 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
+
+	api "github.com/daffainfo/apiguesser/apiguess"
 )
 
 var (
@@ -43,14 +45,14 @@ func main() {
 
 	if *api != "" && *path == "" && len(*api) > 3 {
 		fmt.Println(Cyan(*api))
-		if Regex_api(*api) != "" {
-			fmt.Print(Green(Regex_api(*api)))
+		if api.Regex_api(*api) != "" {
+			fmt.Print(Green(api.Regex_api(*api)))
 		} else {
 			fmt.Println(Red("Not Match"))
 		}
 
 	} else if *api == "" && *path != "" {
-		Regex_api_file(*path)
+		api.Regex_api_file(*path)
 	} else if *api != "" || *path != "" {
 		fmt.Println(Red("Can't call 2 arguments at once"))
 	}
