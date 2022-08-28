@@ -1,114 +1,487 @@
 [
     {
-        "Name": ["AdotpAPet API Key"],
+        "Name": [
+            "AdotpAPet API Key"
+        ],
         "Regex": "^\\s*([a-z0-9]{33})\\z"
     },
     {
-        "Name": ["Petfinder API Key"],
+        "Name": [
+            "Petfinder API Key"
+        ],
         "Regex": "^\\s*([a-zA-Z0-9]{50})\\z"
     },
     {
-        "Name": ["Word Cloud API Key"],
+        "Name": [
+            "Amdoren API Key"
+        ],
+        "Regex": "^\\s*([a-zA-Z0-9]{30})\\z"
+    },
+    {
+        "Name": [
+            "Brave New Coin API Key",
+            "Word Cloud API Key"
+        ],
         "Regex": "^\\s*([a-z0-9]{50})\\z"
     },
     {
-        "Name": ["AdotpAPet Client Secret"],
+        "Name": [
+            "Wordnik API Key"
+        ],
+        "Regex": "^\\s*([a-z0-9]{49})\\z"
+    },
+    {
+        "Name": [
+            "AdotpAPet Client Secret",
+            "Petfinder Secret Token"
+        ],
         "Regex": "^\\s*([a-zA-Z0-9]{40})\\z"
     },
     {
-        "Name": ["eBird API Key"],
+        "Name": [
+            "eBird API Key"
+        ],
         "Regex": "^\\s*([a-z0-9]{12})\\z"
     },
     {
-        "Name": ["IUCN API Key","AlienVault Open Threat Exchange API Key","MalShare API Key","VirusTotal API Key","Dribbble API Key"],
+        "Name": [
+            "Dropbox API Key"
+        ],
+        "Regex": "^\\s*(sl.[a-zA-Z0-9_-]{136})\\z"
+    },
+    {
+        "Name": [
+            "JSONBin API Key"
+        ],
+        "Regex": "^\\s*(\\$2b\\$10\\$[a-zA-Z0-9\/]{53})\\z"
+    },
+    {
+        "Name": [
+            "IUCN API Key",
+            "AlienVault Open Threat Exchange API Key",
+            "MalShare API Key",
+            "VirusTotal API Key",
+            "PageCDN API Key",
+            "Dribbble API Key",
+            "Pinata Secret API Key"
+        ],
         "Regex": "^\\s*([a-z0-9]{64})\\z"
     },
     {
-        "Name": ["TheCatAPI API Key","TheDogAPI API Key","URLScan API Key","Harvard Art Museums API Key","MojoAuth API Key","ORB Intelligence API Key"],
-        "Regex": "[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}"
+        "Name": [
+            "Blockchain API Key",
+            "Cloudmersive API Key",
+            "CoinMarketCap API Key",
+            "Harvard Art Museums API Key",
+            "Holiday API Key",
+            "IQAir API Key",
+            "MojoAuth API Key",
+            "ORB Intelligence API Key",
+            "ReviewApi API Key",
+            "TheCatAPI API Key",
+            "TheDogAPI API Key",
+            "SportdataAPI API Key",
+            "URLScan API Key",
+            "Zenserp API Key",
+            "Zipcodebase API Key"
+        ],
+        "Regex": "^\\s*([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})\\z"
     },
     {
-        "Name": ["AniAPI OAuth Token","MyAnimeList OAuth Token"],
+        "Name": [
+            "AniAPI OAuth Token",
+            "CloudConvert OAuth Token",
+            "Monday.com OAuth Token",
+            "MyAnimeList OAuth Token",
+            "Supportivekoala OAuth Token",
+            "Web3 Storage OAuth Token"
+        ],
         "Regex": "^[A-Za-z0-9-_=]+\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+/=]*$"
     },
     {
-        "Name": ["AbuseIPDB API Key"],
+        "Name": [
+            "AbuseIPDB API Key"
+        ],
         "Regex": "^\\s*([a-z0-9]{80})\\z"
     },
     {
-        "Name": ["Smartsheet API Key"],
+        "Name": [
+            "Coinranking API Key"
+        ],
+        "Regex": "^\\s*(coinranking[a-z0-9]{48})\\z"
+    },
+    {
+        "Name": [
+            "CodeStats API Key"
+        ],
+        "Regex": "^\\s*(SFMyNTY\\.[A-Za-z0-9-_=]+\\.?[A-Za-z0-9-_.+/=]*$)\\z"
+    },
+    {
+        "Name": [
+            "Blockfrost Mainnet API Key"
+        ],
+        "Regex": "^\\s*(mainnet[a-zA-Z0-9]{32})\\z"
+    },
+    {
+        "Name": [
+            "Blockfrost Testnet API Key"
+        ],
+        "Regex": "^\\s*(testnet[a-zA-Z0-9]{32})\\z"
+    },
+    {
+        "Name": [
+            "Blockfrost IPFS API Key"
+        ],
+        "Regex": "^\\s*(ipfs[a-zA-Z0-9]{32})\\z"
+    },
+    {
+        "Name": [
+            "Smartsheet API Key"
+        ],
         "Regex": "^\\s*([a-z0-9]{26})\\z"
     },
     {
-        "Name": ["Square API Key"],
-        "Regex": "EAAAE[a-zA-Z0-9_-]{59}"
+        "Name": [
+            "host.io API Key"
+        ],
+        "Regex": "^\\s*([a-z0-9]{14})\\z"
     },
     {
-        "Name": ["Stytch Project ID"],
-        "Regex": "project-.*-[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}"
+        "Name": [
+            "CoinAPI API Key"
+        ],
+        "Regex": "^\\s*([A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12})\\z"
     },
     {
-        "Name": ["Stytch Secret Token"],
-        "Regex": "secret-.*-[a-zA-Z0-9-_=]{36}"
+        "Name": [
+            "Square API Key"
+        ],
+        "Regex": "^\\s*(EAAAE[a-zA-Z0-9_-]{59})\\z"
     },
     {
-        "Name": ["Google Safe Browsing API Key","Google Books API Key"],
-        "Regex": "AIza[0-9A-Za-z-_]{35}"
+        "Name": [
+            "Stytch Project ID"
+        ],
+        "Regex": "^\\s*(project-.*-[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})\\z"
     },
     {
-        "Name": ["Cooper Hewitt API Key","MalwareBazaar API Key","API Bible API Key","Scanii API Key","Charity Search API Key","Instatus API Key","Trello API Key"],
+        "Name": [
+            "Stytch Secret Token"
+        ],
+        "Regex": "^\\s*(secret-.*-[a-zA-Z0-9-_=]{36})\\z"
+    },
+    {
+        "Name": [
+            "Google Safe Browsing API Key",
+            "Google Books API Key"
+        ],
+        "Regex": "^\\s*(AIza[0-9A-Za-z-_]{35})\\z"
+    },
+    {
+        "Name": [
+            "API Bible API Key",
+            "Abstract Company Enrichment API Key",
+            "Abstract Email Validation API Key",
+            "Abstract Exchange Rates API Key",
+            "Abstract IBAN Validation API Key",
+            "Abstract IP Geolocation API Key",
+            "Abstract Image Processing API Key",
+            "Abstract Phone Validation API Key",
+            "Abstract Public Holidays API Key",
+            "Abstract Time, Date & Timezone API Key",
+            "Abstract User Avatars API Key",
+            "Abstract VAT Validation Rates API Key",
+            "Abstract Web Scraping API Key",
+            "Abstract Website Screenshot API Key",
+            "Api2Convert API Key",
+            "ApiFlash API Key",
+            "aviationstack API Key",
+            "BreezoMeter API Key",
+            "Charity Search API Key",
+            "Coinlayer API Key",
+            "Cooper Hewitt API Key",
+            "CurrencyFreaks API Key",
+            "CurrencyScoop API Key",
+            "Currencylayer API Key",
+            "Festivo Public Holidays API Key",
+            "Fixer API Key",
+            "Hirak Exchange Rates API Key",
+            "Instatus API Key",
+            "ipapi API Key",
+            "IPFind API Key",
+            "ipstack API Key",
+            "languagelayer API Key",
+            "Marketstack API Key",
+            "mediastack API Key",
+            "MalwareBazaar API Key",
+            "OpenAPIHub API Key",
+            "Pastebin API Key",
+            "pdflayer API Key",
+            "positionstack API Key",
+            "SavePage API Key",
+            "Scanii API Key",
+            "ScraperAPI API Key",
+            "scrapestack API Key",
+            "ScrapingAnt API Key",
+            "screenshotlayer API Key",
+            "serpstack API Key",
+            "Trello API Key",
+            "userstack API Key",
+            "weatherstack API Key"
+        ],
         "Regex": "^\\s*([a-z0-9]{32})\\z"
     },
     {
-        "Name": ["Europeana API Key"],
+        "Name": [
+            "Block API Key"
+        ],
+        "Regex": "^\\s*([a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4})\\z"
+    },
+    {
+        "Name": [
+            "SeatGeek API Key"
+        ],
+        "Regex": "^\\s*(MjM[a-zA-Z0-9]{33})\\z"
+    },
+    {
+        "Name": [
+            "Browshot API Key"
+        ],
+        "Regex": "^\\s*([a-zA-Z0-9]{27,30})\\z"
+    },
+    {
+        "Name": [
+            "Lob API Key"
+        ],
+        "Regex": "^\\s*(test_[a-z0-9]{35})\\z"
+    },
+    {
+        "Name": [
+            "MAC Address Lookup API Key"
+        ],
+        "Regex": "^\\s*(at_[a-zA-Z0-9]{29})\\z"
+    },
+    {
+        "Name": [
+            "Coinlib API Key"
+        ],
+        "Regex": "^\\s*([a-z0-9]{16})\\z"
+    },
+    {
+        "Name": [
+            "OpenGraphr API Key"
+        ],
+        "Regex": "^\\s*([a-zA-Z0-9]{80})\\z"
+    },
+    {
+        "Name": [
+            "Aletheia API Key",
+            "IP2WHOIS API Key",
+            "ScraperBox API Key"
+        ],
+        "Regex": "^\\s*([A-Z0-9]{32})\\z"
+    },
+    {
+        "Name": [
+            "ddownload API Key"
+        ],
+        "Regex": "^\\s*([a-z0-9]{22})\\z"
+    },
+    {
+        "Name": [
+            "Gorest API Key"
+        ],
+        "Regex": "^\\s*([a-z0-9]{65})\\z"
+    },
+    {
+        "Name": [
+            "Blitapp API Key"
+        ],
+        "Regex": "^\\s*([a-zA-Z0-9-_.~]{35,48})\\z"
+    },
+    {
+        "Name": [
+            "Asana API Key"
+        ],
+        "Regex": "^\\s*(0\/[a-z0-9]{32})\\z"
+    },
+    {
+        "Name": [
+            "Europeana API Key"
+        ],
         "Regex": "^\\s*([a-z]{8,10})\\z"
     },
     {
-        "Name": ["Scanii Secret Key"],
+        "Name": [
+            "Screenshot API Key"
+        ],
+        "Regex": "^\\s*([A-Z0-9]{7}-[A-Z0-9]{7}-[A-Z0-9]{7}-[A-Z0-9]{7})\\z"
+    },
+    {
+        "Name": [
+            "ExchangeRate-API API Key",
+            "ScrapingDog API Key"
+        ],
+        "Regex": "^\\s*([a-z0-9]{24})\\z"
+    },
+    {
+        "Name": [
+            "Flowdash API Key"
+        ],
+        "Regex": "^\\s*([a-zA-Z0-9]{24})\\z"
+    },
+    {
+        "Name": [
+            "Bitrise API Key"
+        ],
+        "Regex": "^\\s*([a-zA-Z0-9-_]{86})\\z"
+    },
+    {
+        "Name": [
+            "Scanii Secret Key"
+        ],
         "Regex": "^\\s*([a-z0-9]{9})\\z"
     },
     {
-        "Name": ["Mailgun API Key"],
-        "Regex": "key-[a-z0-9]{32}"
+        "Name": [
+            "Mailgun API Key"
+        ],
+        "Regex": "^\\s*(key-[a-z0-9]{32})\\z"
     },
     {
-        "Name": ["MailboxValidator Secret Key"],
+        "Name": [
+            "Climatiq API Key"
+        ],
+        "Regex": "^\\s*([A-Z0-9]{28})\\z"
+    },
+    {
+        "Name": [
+            "MailboxValidator Secret Key",
+            "Pinata API Key"
+        ],
         "Regex": "^\\s*([A-Z0-9]{20})\\z"
     },
     {
-        "Name": ["Clearbit API Key","ImprovMX API Key"],
-        "Regex": "sk_[a-z0-9]{32}"
+        "Name": [
+            "ClickUp API Key"
+        ],
+        "Regex": "^\\s*(pk_[0-9]{8}_[0-9A-Z]{32})\\z"
     },
     {
-        "Name": ["Bhagavad Gita Secret Key"],
+        "Name": [
+            "Clearbit API Key",
+            "ImprovMX API Key"
+        ],
+        "Regex": "^\\s*(sk_[a-z0-9]{32})\\z"
+    },
+    {
+        "Name": [
+            "Bhagavad Gita Secret Key"
+        ],
         "Regex": "^\\s*([a-z0-9]{17})\\z"
     },
     {
-        "Name": ["IconFinder API Key"],
+        "Name": [
+            "BitcoinAverage API Key"
+        ],
+        "Regex": "^\\s*([a-zA-Z0-9]{43})\\z"
+    },
+    {
+        "Name": [
+            "IconFinder API Key",
+            "Binance API Key",
+            "Html2PDF API Key",
+            "PrexView API Key"
+        ],
         "Regex": "^\\s*([a-zA-Z0-9]{64})\\z"
     },
     {
-        "Name": ["Rijksmuseum API Key"],
+        "Name": [
+            "Rijksmuseum API Key"
+        ],
         "Regex": "^\\s*([a-zA-Z0-9]{8})\\z"
     },
     {
-        "Name": ["Micro User Service API Key"],
+        "Name": [
+            "Quip Oauth Token"
+        ],
+        "Regex": "^\\s*([a-zA-Z0-9]{15}=\\|[0-9]{10}\\|[a-zA-Z0-9\/+]{43}=)\\z"
+    },
+    {
+        "Name": [
+            "ProxyCrawl API Key",
+            "ProxyKingdom API Key"
+        ],
+        "Regex": "^\\s*([a-zA-Z0-9_]{22})\\z"
+    },
+    {
+        "Name": [
+            "Micro User Service API Key",
+            "Clockify API Key"
+        ],
         "Regex": "^\\s*([a-zA-Z0-9]{48})\\z"
     },
     {
-        "Name": ["Covalent API Key"],
-        "Regex": "ckey_[a-z0-9]{27}"
+        "Name": [
+            "Covalent API Key"
+        ],
+        "Regex": "^\\s*(ckey_[a-z0-9]{27})\\z"
     },
     {
-        "Name": ["Etherscan API Key"],
+        "Name": [
+            "Etherscan API Key"
+        ],
         "Regex": "^\\s*([A-Z0-9]{34})\\z"
     },
     {
-        "Name": ["Nownodes API Key","Bitquery API Key"],
-        "Regex": "^\\s*([A-Za-z0-9]{32})\\z"
+        "Name": [
+            "CraftMyPDF API Key"
+        ],
+        "Regex": "^\\s*([a-zA-Z0-9]{35})\\z"
     },
     {
-        "Name": ["Web of Trust API Key","Calendarific API Key"],
+        "Name": [
+            "1Forge API Key",
+            "Bitquery API Key",
+            "Box API Key",
+            "GoFile API Key",
+            "Nownodes API Key",
+            "Ticketmaster API Key"
+        ],
+        "Regex": "^\\s*([a-zA-Z0-9]{32})\\z"
+    },
+    {
+        "Name": [
+            "Web of Trust API Key",
+            "Calendarific API Key",
+            "Hunter API Key",
+            "Todoist API Key",
+            "ZenRows API Key"
+        ],
         "Regex": "^\\s*([a-z0-9]{40})\\z"
+    },
+    {
+        "Name": [
+            "Airtable API Key"
+        ],
+        "Regex": "^\\s*(key[a-zA-Z0-9]{14})\\z"
+    },
+    {
+        "Name": [
+            "Open Page Rank API Key"
+        ],
+        "Regex": "^\\s*([gcswkso048]{40})\\z"
+    },
+    {
+        "Name": [
+            "Carbon Interface API Key"
+        ],
+        "Regex": "^\\s*([a-zA-Z0-9]{21})\\z"
+    },
+    {
+        "Name": [
+            "Alchemy API Key"
+        ],
+        "Regex": "^\\s*([a-zA-Z0-9-]{32})\\z"
     }
 ]
